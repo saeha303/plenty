@@ -1,18 +1,12 @@
 require("dotenv").config();
 var express = require('express');
-const cors = require('cors');
+
 const cookieParser = require('cookie-parser');
 var app = express();
 
-app.use(cors(
-{
-  origin: '*',
-  methods:["GET","POST","PUT","DELETE","OPTIONS"],
-  allowedHeaders: ['Content-Type', 'Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
-  credentials: true
-}
 
-));
+
+
 app.use(cookieParser());
 app.use(express.json())
 // app.use((req, res, next) => {
@@ -24,7 +18,7 @@ app.use(express.json())
 //   res.header("Access-Control-Allow-Headers", "Content-Type");
 //   next();
 // });
-app.options('/api/*', cors());
+// app.options('/api/*', cors());
 app.listen(process.env.PORT, () => {
   console.log(`Server listening on ${process.env.PORT}`);
 })
@@ -42,10 +36,19 @@ connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
 })
 // ===========================================================
-// const bodyParser = require('body-parser');
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
+var cors = require("cors");
+app.use(cors(
+  {
+    origin: 'http://localhost:3000/',
+    methods:["GET","POST","PUT","DELETE","OPTIONS"],
+    allowedHeaders: ['Content-Type', 'Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
+    credentials: true
+  }
+  ));
 const authRoute = require('./routes/auth');
 app.use('/api', authRoute);
 const userRoutes = require("./routes/user");
