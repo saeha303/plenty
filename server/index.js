@@ -23,11 +23,14 @@ app.use(cors());
 //   next();
 // });
 app.options('/api/*', (req, res) => {
+  console.log("my head hurts");
   // Set appropriate CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
+  console.log("my eyes hurt");
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  console.log("my hands hurt");
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-
+  console.log("my heart hurts");
   // Respond with a status code of 200 to indicate that the request is allowed
   res.sendStatus(200);
 });
