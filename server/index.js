@@ -22,7 +22,15 @@ app.use(cors());
 //   res.header("Access-Control-Allow-Headers", "Content-Type");
 //   next();
 // });
-// app.options('/api/*', cors());
+app.options('/api/*', (req, res) => {
+  // Set appropriate CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+  // Respond with a status code of 200 to indicate that the request is allowed
+  res.sendStatus(200);
+});
 app.listen(process.env.PORT, () => {
   console.log(`Server listening on ${process.env.PORT}`);
 })

@@ -4,6 +4,8 @@ const { check, validationResult } = require("express-validator");
 // const cookieParser = require('cookie-parser');
 var jwt = require("jsonwebtoken");
 var expressJwt = require("express-jwt");
+// const cors=require("cors");
+
 // app.use(cookieParser());
 exports.signup = async (req, res) => {
     const errors = validationResult(req);
@@ -36,7 +38,7 @@ exports.signup = async (req, res) => {
 
 exports.signin = (req, res) => {
 
-//     res.setHeader("Access-Control-Allow-Origin", "*")
+    res.setHeader("Access-Control-Allow-Origin", "*");
 // res.setHeader("Access-Control-Allow-Credentials", "true");
 // res.setHeader("Access-Control-Max-Age", "1800");
 // res.setHeader("Access-Control-Allow-Headers", "content-type");

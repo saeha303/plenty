@@ -1,5 +1,5 @@
 const express = require("express");
-const cors=require("cors");
+// const cors=require("cors");
 const router = express.Router();
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -10,7 +10,7 @@ let staticPath = path.join(__dirname, '../public/client')
 const fileupload = require('express-fileupload')
 // Serve static files (including images) from the "public" directory
 // router.use(express.static('public'));
-router.use(cors());
+// router.use(cors());
 router.use(express.static('assets')); // Add this line to serve images
 router.use(cookieParser());
 
