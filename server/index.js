@@ -59,3 +59,7 @@ app.use("/api", notificationRoutes);
 const sellRoutes = require("./routes/sell");
 app.use("/api", sellRoutes);
 
+app.get('/cors', (req, res) => {
+  res.set('Access-Control-Allow-Origin', '*');
+  res.send({ "msg": "This has CORS enabled 🎈" })
+  })

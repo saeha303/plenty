@@ -33,7 +33,7 @@ const Login = () => {
 
     try {
       // Replace 'your_backend_url' with the actual URL of your backend endpoint
-      const response = await axios.post('https://plenty-ten.vercel.app/api/signin/', formData);
+      const response = await axios.post('https://plenty-ten.vercel.app/api/signin', formData);
       console.log('Form submitted:', response.data);
       setMessage('Login successful!');
       const userId = response.data.user._id;
