@@ -1,0 +1,78 @@
+
+
+  /* .auction-product-bids {
+    background-color: #f8f8f8;
+    margin-left: 250px; 
+    margin-top: 50px;
+    padding: 20px; 
+    flex-grow: 1; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .auction-product-bids h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .bid-item {
+    list-style: none;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #dcfae6;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+
+
+  .bid-item {
+    border: 1px solid #ccc; 
+    margin-bottom: 10px; 
+    padding: 10px; 
+  }
+  
+  .bid-item strong {
+    font-weight: bold;
+    color: #555;
+  } */
+
+
+  .auction-product-bids {
+    background-color: #f8f8f8;
+    margin-left: 250px; /* Adjust the margin based on your sidebar width */
+    margin-top: 50px;
+    padding: 20px; /* Add padding for better spacing */
+    flex-grow: 1; /* Allow the bids to take remaining width */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .auction-product-bids h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .bid-item {
+    list-style: none;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #dcfae6;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* .bid-item div {
+    margin-bottom: 8px;
+  } */
+  
+  .bid-item strong {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  

@@ -1,0 +1,28 @@
+.noticomp-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 500px;
+    height: 130px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    
+}
+
+.noticomp-body{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 17px;
+}
+
+.noticomp-left{
+    margin-left: 10px;
+    position: absolute;
+    left: 3px;
+    up: 1px;
+}
+.noticomp-right{
+    position: absolute;
+    right: 3px;
+    bottom: 27px;
+}

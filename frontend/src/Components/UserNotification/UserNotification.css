@@ -1,0 +1,39 @@
+.all-notifications{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    width: 100%;
+    gap: 7px;
+    margin-top: 8px;
+}
+
+.unot-container {
+   
+  }
+  
+.unot-content {
+  position: relative;
+  /* transform: translate(-50%, -50%); */
+  width: 550px;
+  height: 600px;
+  /* background-color: rgba(8, 8, 8, 0.5); */
+  align-items: center;
+  justify-content: center;
+
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    /* box-sizing: content-box; */
+  }
+  
+  .unot-close-btn {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+

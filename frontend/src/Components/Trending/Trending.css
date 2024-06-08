@@ -1,0 +1,15 @@
+.trending{
+    display: flexbox;
+    justify-content: space-around;
+    margin-left: 75px;
+}
+
+.tr-products{
+    display: flex;
+    align-content: flex-start;
+    gap: 40px;
+    overflow-x: auto;
+    width: 100%; 
+    height: 430px;
+    margin: 20px;
+}
