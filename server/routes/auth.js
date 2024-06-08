@@ -30,6 +30,7 @@ router.post('/signup',
 // Signin route
 //login route
 router.get('/signin', (req, res) => {
+    
     res.sendFile(path.join(staticPath, "log-in.html"));
     // res.sendFile(path.join(__dirname, '../public/client', 'log-in.html'));
 })
