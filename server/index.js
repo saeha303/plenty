@@ -1,12 +1,16 @@
 require("dotenv").config();
 var express = require('express');
-
+var cors = require("cors");
 const cookieParser = require('cookie-parser');
 var app = express();
-
-
-
-
+app.use(cors(
+  {
+    origin: 'http://localhost:3000/',
+    methods:["GET","POST","PUT","DELETE","OPTIONS"],
+    allowedHeaders: ['Content-Type', 'Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
+    credentials: true
+  }
+  ));
 app.use(cookieParser());
 app.use(express.json())
 // app.use((req, res, next) => {
@@ -40,15 +44,6 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var cors = require("cors");
-app.use(cors(
-  {
-    origin: 'http://localhost:3000/',
-    methods:["GET","POST","PUT","DELETE","OPTIONS"],
-    allowedHeaders: ['Content-Type', 'Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
-    credentials: true
-  }
-  ));
 const authRoute = require('./routes/auth');
 app.use('/api', authRoute);
 const userRoutes = require("./routes/user");
