@@ -99,3 +99,8 @@ app.use("/api", sellRoutes);
 //           ]
 //         }
 //       ]
+
+// "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+//       "headers": {
+//         "Access-Control-Allow-Origin": "plenty-front.vercel.app/"
+//       }
