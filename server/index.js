@@ -6,7 +6,7 @@ var app = express();
 
 app.use(cors(
 {
-  origin:'https://plenty-front.vercel.app/',
+  origin: true,
   methods:["GET","POST","PUT","DELETE","OPTIONS"],
   allowedHeaders: ['Content-Type', 'Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
   credentials: true
@@ -42,9 +42,9 @@ connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
 })
 // ===========================================================
-const bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+// const bodyParser = require('body-parser');
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
 
 const authRoute = require('./routes/auth');
 app.use('/api', authRoute);
