@@ -6,8 +6,8 @@ var app = express();
 
 app.use(cors(
 {
-  origin:["https://plenty-ten.vercel.app"],
-  methods:["GET","POST","PUT","DELETE","OPTIONS"]
+  // origin:["https://plenty-ten.vercel.app"],
+  // methods:["GET","POST","PUT","DELETE","OPTIONS"]
 }
 
 ));
