@@ -1,6 +1,8 @@
 {
   "name": "reactshikhi",
   "version": "0.1.0",
+  "proxy":"https://plenty-ten.vercel.app",
+  "homepage": "https://plenty-ten.vercel.app",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -10,6 +12,7 @@
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.3",
     "chart.js": "^4.4.1",
+    "http-proxy-middleware": "^3.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",
     "react-chartjs-2": "^5.2.0",
