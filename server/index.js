@@ -3,14 +3,14 @@ var express = require('express');
 var cors = require("cors");
 // const cookieParser = require('cookie-parser');
 const app = express();
-app.use(cors());
-  // {
-  //   origin: 'http://localhost:3000/',
-  //   methods:["GET","POST","PUT","DELETE","OPTIONS"],
-  //   allowedHeaders: ['Content-Type', 'Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
-  //   credentials: true
-  // }
-  
+app.use(cors(
+  {
+    origin: 'https://plenty-front.vercel.app',
+    methods:["GET","POST","PUT","DELETE","OPTIONS"],
+    allowedHeaders: ['Content-Type', 'Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
+    credentials: true
+  }
+));
 // app.use(cookieParser());
 // app.use(express.json())
 // app.use((req, res, next) => {
@@ -22,18 +22,18 @@ app.use(cors());
 //   res.header("Access-Control-Allow-Headers", "Content-Type");
 //   next();
 // });
-app.options('/api/*', (req, res) => {
-  console.log("my head hurts");
-  // Set appropriate CORS headers
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  console.log("my eyes hurt");
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  console.log("my hands hurt");
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  console.log("my heart hurts");
-  // Respond with a status code of 200 to indicate that the request is allowed
-  res.sendStatus(200);
-});
+// app.options('/api/*', (req, res) => {
+//   console.log("my head hurts");
+//   // Set appropriate CORS headers
+//   res.setHeader('Access-Control-Allow-Origin', '*');
+//   console.log("my eyes hurt");
+//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+//   console.log("my hands hurt");
+//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+//   console.log("my heart hurts");
+//   // Respond with a status code of 200 to indicate that the request is allowed
+//   res.sendStatus(200);
+// });
 app.listen(process.env.PORT, () => {
   console.log(`Server listening on ${process.env.PORT}`);
 })
@@ -114,7 +114,7 @@ app.use("/api", sellRoutes);
 //         "Access-Control-Allow-Origin": "plenty-front.vercel.app/"
 //       }
 
-// "proxy": "https://plenty-ten.vercel.app"
+// "proxy": "http://localhost:8000"
 
 // "version": 2,
 //   "builds": [
