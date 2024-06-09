@@ -35,9 +35,9 @@ const ViewProduct = () => {
     console.log("category in view product")
     let path=''
     if (category === 'comingsoon') {
-      path=`https://plenty-ten.vercel.app/api/comingsoon/${userId}/${productId}`;
+      path=`http://localhost:8000/api/comingsoon/${userId}/${productId}`;
   } else {
-      path=`https://plenty-ten.vercel.app/api/product/${userId}/${productId}`;
+      path=`http://localhost:8000/api/product/${userId}/${productId}`;
   }
   console.log(path);
   
