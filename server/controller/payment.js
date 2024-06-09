@@ -58,19 +58,19 @@ exports.success = async (req, res) => {
 
   // res.status(200).json({"message": `${req.params.transId} is successful`});
   // console.log(`${req.params.transId} is successful`);
-  res.redirect(`http://localhost:3000/home/659ef1753bec420af571c082`);
+  res.redirect(`https://plenty-front.vercel.app/home/659ef1753bec420af571c082`);
 };
 exports.successSell = async (req, res) => {
   const { pname, pdescription, pprice, pphoto,reqId } = req.query;
   // console.log(reqId);
   // res.status(200).json({"message": `${req.params.transId} is successful`});
   // console.log(`${req.params.transId} is successful`);
-  res.redirect(`http://localhost:3000/admin/viewsellrequests/review?pname=${encodeURIComponent(pname)}&pdescription=${encodeURIComponent(pdescription)}&pprice=${encodeURIComponent(pprice)}&pphoto=${encodeURIComponent(pphoto)}&reqId=${encodeURIComponent(reqId)}`);
+  res.redirect(`https://plenty-front.vercel.app/admin/viewsellrequests/review?pname=${encodeURIComponent(pname)}&pdescription=${encodeURIComponent(pdescription)}&pprice=${encodeURIComponent(pprice)}&pphoto=${encodeURIComponent(pphoto)}&reqId=${encodeURIComponent(reqId)}`);
 };
 exports.fail = async (req, res) => {
   // res.status(400).json({"message": `${req.params.transId} has failed`});
   // console.log(`${req.params.transId} has failed`)
-  res.redirect(`http://localhost:3000/payment/fail/${req.params.transId}`);
+  res.redirect(`https://plenty-front.vercel.app/payment/fail/${req.params.transId}`);
 };
 
 exports.paymentAuction = async (req, res) => {
