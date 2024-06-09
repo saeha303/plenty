@@ -23,7 +23,7 @@ const Home = () => {
   return (
    <div>
       <Navbar userId={userId} menu={"favourites"}/>
-      <Wishlist category="Favourites" mypath={`http://localhost:8000/api/favourites/${userId}`} userId={userId}/>
+      <Wishlist category="Favourites" mypath={`https://plenty-ten.vercel.app/api/favourites/${userId}`} userId={userId}/>
       <Footer />
     </div>
   );

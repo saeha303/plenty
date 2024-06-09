@@ -114,7 +114,7 @@ app.use("/api", sellRoutes);
 //         "Access-Control-Allow-Origin": "plenty-front.vercel.app/"
 //       }
 
-// "proxy": "http://localhost:8000"
+// "proxy": "https://plenty-ten.vercel.app"
 
 // "version": 2,
 //   "builds": [
